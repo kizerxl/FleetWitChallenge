@@ -1,15 +1,15 @@
 //
-//  ChallengeTests.swift
+//  Test.swift
 //  ChallengeTests
 //
-//  Created by Felix Changoo on 11/12/18.
+//  Created by Felix Changoo on 11/13/18.
 //  Copyright © 2018 Felix Changoo. All rights reserved.
 //
 
 import XCTest
 @testable import Challenge
 
-class ChallengeTests: XCTestCase {
+class Test: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

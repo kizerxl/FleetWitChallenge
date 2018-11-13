@@ -12,9 +12,12 @@
 		7656AD53219A7E0D006ECC49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7656AD51219A7E0D006ECC49 /* Main.storyboard */; };
 		7656AD55219A7E10006ECC49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7656AD54219A7E10006ECC49 /* Assets.xcassets */; };
 		7656AD58219A7E10006ECC49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7656AD56219A7E10006ECC49 /* LaunchScreen.storyboard */; };
-		7656AD63219A7E10006ECC49 /* ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656AD62219A7E10006ECC49 /* ChallengeTests.swift */; };
+		7656AD63219A7E10006ECC49 /* ApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656AD62219A7E10006ECC49 /* ApiServiceTests.swift */; };
 		7656AD6E219A7E10006ECC49 /* ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656AD6D219A7E10006ECC49 /* ChallengeUITests.swift */; };
 		7656AD7E219A83E4006ECC49 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656AD7D219A83E4006ECC49 /* Post.swift */; };
+		7656AD80219A8635006ECC49 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656AD7F219A8635006ECC49 /* ApiService.swift */; };
+		7656AD87219AF5B5006ECC49 /* UrlProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656AD86219AF5B5006ECC49 /* UrlProtocols.swift */; };
+		7656AD89219AF8E9006ECC49 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656AD88219AF8E9006ECC49 /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,12 +46,15 @@
 		7656AD57219A7E10006ECC49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7656AD59219A7E10006ECC49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7656AD5E219A7E10006ECC49 /* ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7656AD62219A7E10006ECC49 /* ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeTests.swift; sourceTree = "<group>"; };
+		7656AD62219A7E10006ECC49 /* ApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceTests.swift; sourceTree = "<group>"; };
 		7656AD64219A7E10006ECC49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7656AD69219A7E10006ECC49 /* ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7656AD6D219A7E10006ECC49 /* ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeUITests.swift; sourceTree = "<group>"; };
 		7656AD6F219A7E10006ECC49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7656AD7D219A83E4006ECC49 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		7656AD7F219A8635006ECC49 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		7656AD86219AF5B5006ECC49 /* UrlProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlProtocols.swift; sourceTree = "<group>"; };
+		7656AD88219AF8E9006ECC49 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		7656AD4C219A7E0D006ECC49 /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				7656AD85219AF594006ECC49 /* Protocol */,
 				7656AD7C219A7EB2006ECC49 /* Service */,
 				7656AD7B219A7EA5006ECC49 /* Model */,
 				7656AD4D219A7E0D006ECC49 /* AppDelegate.swift */,
@@ -114,8 +121,9 @@
 		7656AD61219A7E10006ECC49 /* ChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				7656AD62219A7E10006ECC49 /* ChallengeTests.swift */,
+				7656AD62219A7E10006ECC49 /* ApiServiceTests.swift */,
 				7656AD64219A7E10006ECC49 /* Info.plist */,
+				7656AD88219AF8E9006ECC49 /* Test.swift */,
 			);
 			path = ChallengeTests;
 			sourceTree = "<group>";
@@ -140,8 +148,17 @@
 		7656AD7C219A7EB2006ECC49 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				7656AD7F219A8635006ECC49 /* ApiService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		7656AD85219AF594006ECC49 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				7656AD86219AF5B5006ECC49 /* UrlProtocols.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +292,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7656AD87219AF5B5006ECC49 /* UrlProtocols.swift in Sources */,
 				7656AD7E219A83E4006ECC49 /* Post.swift in Sources */,
 				7656AD50219A7E0D006ECC49 /* ViewController.swift in Sources */,
+				7656AD80219A8635006ECC49 /* ApiService.swift in Sources */,
 				7656AD4E219A7E0D006ECC49 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,7 +304,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7656AD63219A7E10006ECC49 /* ChallengeTests.swift in Sources */,
+				7656AD63219A7E10006ECC49 /* ApiServiceTests.swift in Sources */,
+				7656AD89219AF8E9006ECC49 /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
