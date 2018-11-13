@@ -13,8 +13,12 @@ enum APIError: String, Error {
     case noPermission = "You don't have permission"
 }
 
-class ApiService {
+protocol APIServiceProtocol {
     typealias completion = (_ data: Data?, _ error: Error?) -> Void
+    func get(from url: URL, completionHandler: @escaping completion)
+}
+
+class ApiService: APIServiceProtocol {
     let session: URLSessionProtocol
     
     init(session: URLSessionProtocol) {

@@ -9,10 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    let apiService = ApiService(session: URLSession.shared)
+    var postListViewModel: PostListViewModel!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    func initViewModel() {
+        postListViewModel = PostListViewModel(apiService: apiService)
+        postListViewModel.getPosts()
+        
+        //setup bindings here
     }
 
 
