@@ -43,7 +43,6 @@ class PostListViewModel {
                 
                 strongSelf.posts = posts
                 strongSelf.tableViewModels = postTableViewModels
-                print("posts looks like \(strongSelf.tableViewModels)")
             }
         }
     }

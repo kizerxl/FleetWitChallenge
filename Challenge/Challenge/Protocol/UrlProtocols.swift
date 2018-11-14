@@ -17,3 +17,9 @@ protocol URLSessionProtocol {
 protocol URLSessionDataTaskProtocol {
     func resume()
 }
+
+extension URL {
+    func isValidURL() -> Bool {
+       return self.absoluteString.range(of: "https") != nil
+    }
+}

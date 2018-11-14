@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ViewController: UIViewController {
     let apiService = ApiService(session: URLSession.shared)
@@ -22,8 +23,7 @@ class ViewController: UIViewController {
     }
     
     func setupView() {
-        tableView.estimatedRowHeight = 150
-        tableView.rowHeight = UITableView.automaticDimension
+        tableView.dataSource = self
     }
     
     func initViewModel() {
@@ -40,7 +40,40 @@ class ViewController: UIViewController {
         
         postListViewModel.getPosts()
     }
+}
 
-
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PostTableViewCell else {
+            fatalError("Cell not found!")
+        }
+        
+        let cellViewModel = postListViewModel.getCellViewModel(at: indexPath)
+        cell.titleLabel.text = cellViewModel.title
+        cell.authorLabel.text = cellViewModel.author
+        cell.numCommentsLabel.text = cellViewModel.numComments
+        cell.timePassedLabel.text = cellViewModel.timePassed
+        
+        let url = URL(string: cellViewModel.thumbnail)
+        if let url = url, url.isValidURL() {
+            cell.imageView?.sd_setImage(with: URL(string: cellViewModel.thumbnail), completed: nil)
+            cell.imageView?.clipsToBounds = true
+            cell.imageView?.contentMode = .scaleAspectFit
+        }
+        
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return postListViewModel.totalNumberOfCells
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 180
+    }
 }
 

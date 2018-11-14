@@ -1,0 +1,18 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'Challenge' do
+  # Pods for Challenge
+	pod 'SDWebImage/WebP'
+
+  target 'ChallengeTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'ChallengeUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
