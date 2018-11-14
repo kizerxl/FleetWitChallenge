@@ -14,6 +14,16 @@ class PostListViewModel {
     
     private var posts: [Post] = [Post]()
     
+    private var tableViewModels: [PostTableViewModel] = [PostTableViewModel]() {
+        didSet {
+            self.reloadTableViewClosure?()
+        }
+    }
+    
+    var totalNumberOfCells: Int {
+        return tableViewModels.count
+    }
+    
     //Bindings
     var reloadTableViewClosure: (()->())?
     
@@ -28,13 +38,19 @@ class PostListViewModel {
             guard let strongSelf = self else { return }
             
             if let actualData = data {
-                strongSelf.createPosts(data: actualData)
-                print("posts looks like \(strongSelf.posts)")
+                let posts = strongSelf.createPosts(data: actualData)
+                let postTableViewModels = posts.map { strongSelf.createTableViewModel(post: $0) }
+                
+                strongSelf.posts = posts
+                strongSelf.tableViewModels = postTableViewModels
+                print("posts looks like \(strongSelf.tableViewModels)")
             }
         }
     }
     
-    private func createPosts(data: Data) {
+    private func createPosts(data: Data) -> [Post] {
+        var posts = [Post]()
+        
         if let jsonDict = parsePostData(data: data),
         let dataDict = jsonDict["data"] as? [String: Any],
             let childrenDict = dataDict["children"] as? [[String: Any]] {
@@ -42,9 +58,10 @@ class PostListViewModel {
             childrenDict.forEach { (child) in
                 let postDict = child["data"] as! [String: Any]
                 let newPost = Post(with: postDict)
-                self.posts.append(newPost)
+                posts.append(newPost)
             }
         }
+        return posts
     }
     
     private func parsePostData(data: Data) -> [String: Any]? {
@@ -58,6 +75,14 @@ class PostListViewModel {
         }
         
         return jsonDict
+    }
+    
+    func getCellViewModel(at indexPath: IndexPath) -> PostTableViewModel {
+        return tableViewModels[indexPath.row]
+    }
+    
+    private func createTableViewModel(post: Post) -> PostTableViewModel {
+        return PostTableViewModel(post: post)
     }
     
 }

@@ -17,13 +17,28 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupView()
+        initViewModel()
+    }
+    
+    func setupView() {
+        tableView.estimatedRowHeight = 150
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
     func initViewModel() {
         postListViewModel = PostListViewModel(apiService: apiService)
-        postListViewModel.getPosts()
         
         //setup bindings here
+        postListViewModel.reloadTableViewClosure = { [weak self] in
+            guard let strongSelf = self else { return }
+            
+            DispatchQueue.main.async {
+                strongSelf.tableView.reloadData()
+            }
+        }
+        
+        postListViewModel.getPosts()
     }
 
 

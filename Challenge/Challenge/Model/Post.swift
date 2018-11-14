@@ -11,15 +11,15 @@ struct Post {
     let author: String
     let created: Int
     let thumbnail: String
-    let num_comments: Int
+    let numOfComments: Int
 }
 
 extension Post {
     init(with json:[String: Any]) {
         title = json["title"] as! String
         author = json["author"] as! String
-        created = json["created"] as! Int
+        created = json["created_utc"] as! Int
         thumbnail = json["thumbnail"] as! String
-        num_comments = json["num_comments"] as! Int
+        numOfComments = json["num_comments"] as! Int
     }
 }

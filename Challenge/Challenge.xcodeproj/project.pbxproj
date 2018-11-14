@@ -20,6 +20,8 @@
 		7656AD89219AF8E9006ECC49 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656AD88219AF8E9006ECC49 /* Test.swift */; };
 		7656AD8C219AFC0F006ECC49 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656AD8B219AFC0F006ECC49 /* PostListViewModel.swift */; };
 		7656AD8E219B9A0C006ECC49 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656AD8D219B9A0C006ECC49 /* PostTableViewCell.swift */; };
+		7656AD90219B9CB5006ECC49 /* PostTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656AD8F219B9CB5006ECC49 /* PostTableViewModel.swift */; };
+		7656AD95219BF97C006ECC49 /* IntExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656AD94219BF97C006ECC49 /* IntExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		7656AD88219AF8E9006ECC49 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		7656AD8B219AFC0F006ECC49 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 		7656AD8D219B9A0C006ECC49 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		7656AD8F219B9CB5006ECC49 /* PostTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewModel.swift; sourceTree = "<group>"; };
+		7656AD94219BF97C006ECC49 /* IntExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +113,12 @@
 		7656AD4C219A7E0D006ECC49 /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				7656AD93219BA806006ECC49 /* View */,
 				7656AD8A219AFBF6006ECC49 /* ViewModel */,
 				7656AD85219AF594006ECC49 /* Protocol */,
 				7656AD7C219A7EB2006ECC49 /* Service */,
 				7656AD7B219A7EA5006ECC49 /* Model */,
 				7656AD4D219A7E0D006ECC49 /* AppDelegate.swift */,
-				7656AD4F219A7E0D006ECC49 /* ViewController.swift */,
 				7656AD51219A7E0D006ECC49 /* Main.storyboard */,
 				7656AD54219A7E10006ECC49 /* Assets.xcassets */,
 				7656AD56219A7E10006ECC49 /* LaunchScreen.storyboard */,
@@ -147,6 +151,7 @@
 			children = (
 				7656AD7D219A83E4006ECC49 /* Post.swift */,
 				7656AD8D219B9A0C006ECC49 /* PostTableViewCell.swift */,
+				7656AD8F219B9CB5006ECC49 /* PostTableViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				7656AD86219AF5B5006ECC49 /* UrlProtocols.swift */,
+				7656AD94219BF97C006ECC49 /* IntExt.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -173,6 +179,14 @@
 				7656AD8B219AFC0F006ECC49 /* PostListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7656AD93219BA806006ECC49 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7656AD4F219A7E0D006ECC49 /* ViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,9 +322,11 @@
 			files = (
 				7656AD8E219B9A0C006ECC49 /* PostTableViewCell.swift in Sources */,
 				7656AD87219AF5B5006ECC49 /* UrlProtocols.swift in Sources */,
+				7656AD95219BF97C006ECC49 /* IntExt.swift in Sources */,
 				7656AD7E219A83E4006ECC49 /* Post.swift in Sources */,
 				7656AD8C219AFC0F006ECC49 /* PostListViewModel.swift in Sources */,
 				7656AD50219A7E0D006ECC49 /* ViewController.swift in Sources */,
+				7656AD90219B9CB5006ECC49 /* PostTableViewModel.swift in Sources */,
 				7656AD80219A8635006ECC49 /* ApiService.swift in Sources */,
 				7656AD4E219A7E0D006ECC49 /* AppDelegate.swift in Sources */,
 			);
