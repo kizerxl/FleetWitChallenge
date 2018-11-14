@@ -47,7 +47,8 @@ class ApiServiceTests: XCTestCase {
     }
 
     override func tearDown() {
-        
+        apiService = nil
+        session = nil
     }
 }
 

@@ -20,7 +20,6 @@
 		7656AD7E219A83E4006ECC49 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656AD7D219A83E4006ECC49 /* Post.swift */; };
 		7656AD80219A8635006ECC49 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656AD7F219A8635006ECC49 /* ApiService.swift */; };
 		7656AD87219AF5B5006ECC49 /* UrlProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656AD86219AF5B5006ECC49 /* UrlProtocols.swift */; };
-		7656AD89219AF8E9006ECC49 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656AD88219AF8E9006ECC49 /* Test.swift */; };
 		7656AD8C219AFC0F006ECC49 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656AD8B219AFC0F006ECC49 /* PostListViewModel.swift */; };
 		7656AD8E219B9A0C006ECC49 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656AD8D219B9A0C006ECC49 /* PostTableViewCell.swift */; };
 		7656AD90219B9CB5006ECC49 /* PostTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656AD8F219B9CB5006ECC49 /* PostTableViewModel.swift */; };
@@ -66,7 +65,6 @@
 		7656AD7D219A83E4006ECC49 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		7656AD7F219A8635006ECC49 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		7656AD86219AF5B5006ECC49 /* UrlProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlProtocols.swift; sourceTree = "<group>"; };
-		7656AD88219AF8E9006ECC49 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		7656AD8B219AFC0F006ECC49 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 		7656AD8D219B9A0C006ECC49 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		7656AD8F219B9CB5006ECC49 /* PostTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewModel.swift; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 			children = (
 				7656AD62219A7E10006ECC49 /* ApiServiceTests.swift */,
 				7656AD64219A7E10006ECC49 /* Info.plist */,
-				7656AD88219AF8E9006ECC49 /* Test.swift */,
 			);
 			path = ChallengeTests;
 			sourceTree = "<group>";
@@ -458,7 +455,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7656AD63219A7E10006ECC49 /* ApiServiceTests.swift in Sources */,
-				7656AD89219AF8E9006ECC49 /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
